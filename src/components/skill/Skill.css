@@ -1,0 +1,120 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+
+
+.skill-section
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbf6f6;
+    height:100%;
+    padding:10px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:italic;
+    margin:50px auto;
+}
+
+.main-box
+{
+    display:flex;
+    flex-direction:column;
+    width:75%;
+    height:auto;
+    
+    
+}
+.main-box h3
+{
+    margin-top:10px;
+    text-align: center;
+    color:#1219e6
+}
+
+.skills
+{
+    padding:0 20px;
+}
+
+.skill-name
+{
+    font-size:18px;
+    font-weight:700;
+    color:#100202;
+    text-transform:uppercase;
+    margin:20px 0px;
+}
+
+.skill-bar
+{
+    height:7px;
+    background-color: #282828;
+    border-radius:3px;
+}
+
+
+.skill-per
+{
+      height:7px;
+      background-color:#0b2bb6;
+      border-radius:3px;
+      position:relative; 
+      animation: fillBars 2.5s 1;
+}
+
+.skill-per::before
+{
+    content: attr(per);
+    position:absolute;
+    padding:4px 6px;
+    background-color:#f1f1f1;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:700;
+    color:#140202;
+    top:-35px;
+    right:0;
+    transform:translateX(50%);
+}
+
+
+.skill-per::after
+{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    background-color:#f1f1f1f1;
+    top:-20px;
+    right:0; 
+    transform: translateX(50%)  rotate(45deg);
+    border-radius:2px;
+}
+
+@keyframes  fillBars{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+
+@media screen and (max-width:700px) 
+{
+   
+    .main-box{
+        width:100%;
+    }
+}
+
+
+
+
